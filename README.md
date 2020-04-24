@@ -22,6 +22,32 @@
 Project started, and in development process. More information in the next days / weeks.
 
 
+## 📖 Documentation
+
+
+## Queries 
+
+
+- [x] **PRMedicalAidDistribution**
+
+```graphql
+query{
+  PRMedicalAidDistribution{
+    recipient_Name 
+    city
+    county
+    state
+    first_shipment
+    last_shipment
+    weight_lbs
+    country
+    facility_type
+    number_of_deliveries
+    cost
+  }
+}
+```
+
 
 ## <img src="https://img.icons8.com/color/48/000000/paypal.png"> **Donations**
 COVID19 GraphQL API is an open source project licensed by MIT with continuous development. If you want me to continue maintaining this library and you are interested in continuing to use it, you can help me with a monetary help in the following link:
