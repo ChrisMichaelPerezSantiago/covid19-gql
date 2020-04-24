@@ -67,6 +67,32 @@ query{
 }
 ```
 
+- [x] **HospitalDataAndNeeds**
+```graphql
+query{
+  PRHospitalDataAndNeeds{
+    table{
+      attributes{
+        T_Camas_Adult_Disp
+        T_Camas_Adult_Int_Disp
+        T_Camas_Adult_Int_Occ
+        T_Camas_Ped_Int_Disp 
+        T_Camas_Ped_Int_Occ
+        T_Cuartos_PSINeg_Disp
+        T_Cuartos_PSINeg_Occ
+        T_Vent_Adult_Disp
+        T_Vent_Adult_Occ
+        T_Vent_Ped_Disp
+        T_Vent_Ped_Occ
+        T_Morgue_Disp
+        T_Morgue_Occ
+      }
+    }
+  }
+}
+```
+
+
 ## <img src="https://img.icons8.com/color/48/000000/paypal.png"> **Donations**
 COVID19 GraphQL API is an open source project licensed by MIT with continuous development. If you want me to continue maintaining this library and you are interested in continuing to use it, you can help me with a monetary help in the following link:
 
