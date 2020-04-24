@@ -12,6 +12,28 @@ type TypePRMedicalAidDistribution{
   cost: String
 }
 
+
+
+type AttributesPRDataByTowns{ 
+  town: String 
+  health_region: String 
+  total_cases: Int 
+}
+
+type TablePRDataByTowns{
+  attributes: AttributesPRDataByTowns 
+}
+
+type DataPRDataByTowns{ 
+  table: [TablePRDataByTowns]
+}
+
+type TypePRDataByTowns{ 
+  data: [DataPRDataByTowns ] 
+}
+
+
 type Query{
   PRMedicalAidDistribution: [TypePRMedicalAidDistribution]
+  PRDataByTowns: [DataPRDataByTowns]
 }
