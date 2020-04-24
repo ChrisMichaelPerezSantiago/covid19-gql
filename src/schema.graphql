@@ -33,7 +33,107 @@ type TypePRDataByTowns{
 }
 
 
+
+type AttributesPRHospitalDataAndNeeds { 
+  T_Camas_Adult_Disp: Int
+  T_Camas_Adult_Int_Disp: Int
+  T_Camas_Adult_Int_Occ: Int
+  T_Camas_Ped_Int_Disp: Int
+  T_Camas_Ped_Int_Occ: Int
+  T_Cuartos_PSINeg_Disp: Int
+  T_Cuartos_PSINeg_Occ: Int
+  T_Vent_Adult_Disp: Int
+  T_Vent_Adult_Occ: Int
+  T_Vent_Ped_Disp: Int
+  T_Vent_Ped_Occ: Int
+  T_Morgue_Disp: Int
+  T_Morgue_Occ: Int
+  T_Paciente_Adult: Int
+  T_Paciente_Ped: Int
+  T_Casos_Nuev_Ult_Inf: Int
+  T_Casos_Nuev_DS: String
+  T_Casos_Nuev_AV: String
+  T_Casos_Nuev_LabPriv: String
+  T_Fatalidades: Int
+  T_Casos_Pos: String
+  T_Casos_Neg: String
+  T_Casos_Pend: String
+  T_Casos_Inconcluso: String
+  T_Fem: Int
+  T_Masc: Int
+  T_Menor_10: Int
+  T_10_19: Int
+  T_20_29: Int
+  T_30_39: Int
+  T_40_49: Int
+  T_50_59: Int
+  T_60_69: Int
+  T_70_79: Int
+  T_Mayor_80: Int
+  T_Vent_Ord: Int
+  T_Vent_Rec: Int
+  T_Vent_Entr: Int
+  T_Casos: String
+  T_Prueba_Realizada: String
+  T_Camas_Ped_Disp: Int
+  Edad_No_Dis: Int
+  T_Defunciones_RD: Int
+  T_Suicidios_RD: Int
+  T_Muertes_COVID_RD: Int
+  T_Cuartos_PSiNeg: Int
+  T_Hospitalizados: Int
+  T_Recuperados: Int
+  T_Camas_Int_Adult: Int
+  T_Camas_Int_Ped: Int
+  T_Vent_Adult: Int
+  T_Vent_Ped: Int
+  T_Camas_Adult_Available: String
+  T_Camas_Ped_Available: String
+  T_DefuncionesRD_Ene: Int
+  T_DefuncionesRD_Feb: Int
+  T_DefuncionesRD_Mar: Int
+  T_DefuncionesRD_Abr: Int
+  T_Muertes_Combinadas: Int
+  T_Camas_Adulto: Int
+  T_Camas_Ped: Int
+  T_Pacientes_Int_Covid: Int
+  T_Paciente_Adult_Int_Covid: Int
+  T_Paciente_Ped_Int_Covid: Int
+  T_Paciente_Camas_PSINeg_Covid: String
+  T_Camas_Licen_SARAFS: Int
+  T_Camas_Licen_Activas: Int
+  T_Pruebas_LabPriv_PCR: String
+  T_Pruebas_LabPriv_RapidTest: String
+  T_Vent_Covid: Int
+  T_Vent_Adult_Covid: Int
+  T_Vent_Ped_Covid: Int
+  CreationDate: Int
+  Creator: String
+  EditDate: Int
+  Editor: String
+  T_Hospitalizado_Ped: String
+  T_Paciente_Adult_NoCovid: Int
+  T_Paciente_Ped_NoCovid: String
+  T_Paciente_Adult_Int_NoCovid: Int
+  T_Paciente_Ped_Int_No_Covid: Int
+  T_Pacient_Cama_PSINeg_NoCovid: String
+  T_Casos_Unicos: Int
+  T_Serologicos_Pos: Int
+  T_Molecular_Pos: Int 
+}
+
+type TablePRHospitalDataAndNeeds{ 
+  attributes: AttributesPRHospitalDataAndNeeds 
+}
+
+type DataPRHospitalDataAndNeeds{ 
+  table: [TablePRHospitalDataAndNeeds] 
+}
+
+
+
 type Query{
   PRMedicalAidDistribution: [TypePRMedicalAidDistribution]
   PRDataByTowns: [DataPRDataByTowns]
+  PRHospitalDataAndNeeds: [DataPRHospitalDataAndNeeds]
 }
