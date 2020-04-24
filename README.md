@@ -25,9 +25,11 @@ Project started, and in development process. More information in the next days /
 ## 📖 Documentation
 
 
-## Queries 
+## Data Queries From Puerto Rico
+ 
 
 
+### Medical Data
 - [x] **PRMedicalAidDistribution**
 
 ```graphql
@@ -48,6 +50,22 @@ query{
 }
 ```
 
+### Biosecurity
+- [x] **PRDataByTowns**
+
+```graphql
+query{
+  PRDataByTowns{
+    table{
+      attributes{
+        town
+        health_region
+        total_cases
+      }
+    }
+  }
+}
+```
 
 ## <img src="https://img.icons8.com/color/48/000000/paypal.png"> **Donations**
 COVID19 GraphQL API is an open source project licensed by MIT with continuous development. If you want me to continue maintaining this library and you are interested in continuing to use it, you can help me with a monetary help in the following link:
