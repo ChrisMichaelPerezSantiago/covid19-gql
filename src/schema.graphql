@@ -1,0 +1,17 @@
+type TypePRMedicalAidDistribution{
+  recipient_Name: String
+  city: String
+  county: String
+  state: String
+  first_shipment: String
+  last_shipment: String
+  weight_lbs: Int
+  country: String
+  facility_type: String
+  number_of_deliveries: Int
+  cost: String
+}
+
+type Query{
+  PRMedicalAidDistribution: [TypePRMedicalAidDistribution]
+}
