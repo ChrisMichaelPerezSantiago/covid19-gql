@@ -22,6 +22,28 @@
 Project started, and in development process. More information in the next days / weeks.
 
 
+## ⚙️ Collaboration installation process
+
+**Installation of all dependencies**
+
+```shell
+npm install
+```
+
+**Start local server**
+Local server port assigned to **PORT 3000**
+
+```shell
+npm run start
+```
+
+**GraphQL Playground**
+
+```shell
+http://localhost:3000/graphql
+```
+
+
 ## 📖 Documentation
 
 
@@ -87,6 +109,21 @@ query{
         T_Morgue_Disp
         T_Morgue_Occ
         // ......
+      }
+    }
+  }
+}
+```
+
+- [x] **PRBiosecurityDataByRegion**
+```graphql
+query{
+  PRBiosecurityDataByRegion{
+    table{
+      attributes{
+        RegionSalud
+        Region
+        Total
       }
     }
   }
