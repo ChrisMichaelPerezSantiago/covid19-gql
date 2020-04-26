@@ -1,6 +1,7 @@
 import {IRootPRMedicalAidDistribution , IPRMedicalAidDistribution} from '../interfaces/IPRMedicalAidDistribution';
 import {IRootPRDataByTowns , DataPRDataByTowns} from '../interfaces/IPRDataByTowns';
 import {IRootPRHospitalDataAndNeeds , DataPRHospitalDataAndNeeds} from '../interfaces/IPRHospitalDataAndNeeds';
+import {IRootPRBiosecurityDataByRegion , DataPRBiosecurityDataByRegion} from '../interfaces/IPRBiosecurityDataByRegion';
 
 import axios from 'axios';
 
@@ -23,6 +24,13 @@ export async function usePRDataByTowns(){
 export async function useHospitalDataAndNeeds(){
   const {data} = await axios.get<IRootPRHospitalDataAndNeeds>(`${URL}/Biosecurity/HospitalDataAndNeeds`);
   const doc: DataPRHospitalDataAndNeeds[] = data.data
+
+  return doc;
+}
+
+export async function usePRBiosecurityDataByRegion(){
+  const {data} = await axios.get<IRootPRBiosecurityDataByRegion>(`${URL}/Biosecurity/PRBiosecurityDataByRegion`);
+  const doc: DataPRBiosecurityDataByRegion[] = data.data;
 
   return doc;
 }

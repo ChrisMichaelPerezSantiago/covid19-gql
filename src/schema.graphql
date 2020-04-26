@@ -132,8 +132,25 @@ type DataPRHospitalDataAndNeeds{
 
 
 
+type AttributesPRBiosecurityDataByRegion{ 
+  RegionSalud: String 
+  Region: String 
+  Total: Int
+}
+
+type TablePRBiosecurityDataByRegion{ 
+  attributes: AttributesPRBiosecurityDataByRegion 
+}
+
+type DataPRBiosecurityDataByRegion{
+  table: [TablePRBiosecurityDataByRegion] 
+}
+
+
+
 type Query{
   PRMedicalAidDistribution: [TypePRMedicalAidDistribution]
   PRDataByTowns: [DataPRDataByTowns]
   PRHospitalDataAndNeeds: [DataPRHospitalDataAndNeeds]
+  PRBiosecurityDataByRegion: [DataPRBiosecurityDataByRegion]
 }

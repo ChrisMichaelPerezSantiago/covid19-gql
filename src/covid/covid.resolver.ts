@@ -2,11 +2,13 @@ import { Query , Resolver}  from '@nestjs/graphql';
 import { 
   usePRMedicalAidDistribution,
   usePRDataByTowns,
-  useHospitalDataAndNeeds 
+  useHospitalDataAndNeeds,
+  usePRBiosecurityDataByRegion
 } from './fs/index';
 import { IPRMedicalAidDistribution } from './interfaces/IPRMedicalAidDistribution';
 import { DataPRDataByTowns , TablePRDataByTowns } from './interfaces/IPRDataByTowns';
 import { DataPRHospitalDataAndNeeds } from './interfaces/IPRHospitalDataAndNeeds';
+import { DataPRBiosecurityDataByRegion } from './interfaces/IPRBiosecurityDataByRegion'
 
 @Resolver()
 export class CovidResolver{
@@ -16,8 +18,9 @@ export class CovidResolver{
 
   prHospitalDataAndNeeds: Promise<DataPRHospitalDataAndNeeds[]> = useHospitalDataAndNeeds()
 
-
+  prBiosecurityDataByRegion: Promise<DataPRBiosecurityDataByRegion[]> = usePRBiosecurityDataByRegion();
   
+
   @Query('PRMedicalAidDistribution')
   getPRMedicalAidDistribution(): Promise<IPRMedicalAidDistribution[]>{
     const data: Promise<IPRMedicalAidDistribution[]> = this.prMedicalAidDistribution
@@ -35,6 +38,13 @@ export class CovidResolver{
   @Query('PRHospitalDataAndNeeds')
   geyPRHospitalDataAndNeedstaByTowns(): Promise<DataPRHospitalDataAndNeeds[]>{
     const data: Promise<DataPRHospitalDataAndNeeds[]> = this.prHospitalDataAndNeeds
+
+    return data;
+  }
+
+  @Query('PRBiosecurityDataByRegion')
+  geyPRBiosecurityDataByRegion(): Promise<DataPRBiosecurityDataByRegion[]>{
+    const data: Promise<DataPRBiosecurityDataByRegion[]> = this.prBiosecurityDataByRegion
 
     return data;
   }
